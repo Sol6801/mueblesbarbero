@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUEBLES BARBERO - Muebles de Calidad Premium</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#D4AF37", secondary: "#1a1a1a" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .hero-bg {
+          background-image: url('https://readdy.ai/api/search-image?query=luxury%20modern%20furniture%20showroom%20with%20elegant%20wooden%20tables%20chairs%20sofas%20in%20warm%20lighting%20golden%20accents%20black%20and%20gold%20color%20scheme%20premium%20interior%20design&width=1920&height=800&seq=hero-furniture&orientation=landscape');
+          background-size: cover;
+          background-position: center;
+      }
+      .product-hover:hover {
+          transform: translateY(-8px);
+          transition: all 0.3s ease;
+      }
+      .filter-active {
+          background-color: #D4AF37;
+          color: #1a1a1a;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="w-full px-6 py-4">
+        <div class="flex items-center justify-between max-w-7xl mx-auto">
+          <div class="flex items-center space-x-4">
+            <div
+              class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center"
+            >
+              <span class="text-primary font-bold text-xl">MA</span>
+            </div>
+            <span class="text-2xl font-bold text-secondary"
+              >MUEBLES BARBERO</span
+            >
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#inicio"
+              class="text-secondary hover:text-primary transition-colors"
+              >Inicio</a
+            >
+            <a
+              href="#catalogo"
+              class="text-secondary hover:text-primary transition-colors"
+              >Catálogo</a
+            >
+            <a
+              href="#nosotros"
+              class="text-secondary hover:text-primary transition-colors"
+              >Sobre Nosotros</a
+            >
+            <a
+              href="#contacto"
+              class="text-secondary hover:text-primary transition-colors"
+              >Contacto</a
+            >
+          </div>
+          <button class="md:hidden w-8 h-8 flex items-center justify-center">
+            <i class="ri-menu-line text-2xl text-secondary"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      id="inicio"
+      class="hero-bg relative min-h-screen flex items-center"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div class="relative z-10 w-full px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="max-w-2xl">
+            <h1
+              class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+            >
+              Muebles de<br />
+              <span class="text-primary">Calidad Premium</span>
+            </h1>
+            <p class="text-xl text-gray-200 mb-8 leading-relaxed">
+              Descubre nuestra exclusiva colección de muebles artesanales
+              diseñados para transformar tu hogar en un espacio único y
+              elegante.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <button
+                class="bg-primary text-secondary px-8 py-4 !rounded-button font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap"
+              >
+                Ver Catálogo
+              </button>
+              <button
+                class="border-2 border-white text-white px-8 py-4 !rounded-button font-semibold hover:bg-white hover:text-secondary transition-colors whitespace-nowrap"
+              >
+                Contactar Ahora
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalogo" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-4">
+            Nuestro Catálogo
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explora nuestra amplia selección de muebles premium, cada pieza
+            cuidadosamente diseñada y fabricada con los mejores materiales.
+          </p>
+        </div>
+
+        <div class="mb-12">
+          <div class="flex flex-wrap gap-4 justify-center">
+            <button
+              class="filter-btn px-6 py-3 !rounded-button border border-gray-300 text-gray-700 hover:border-primary hover:text-primary transition-colors whitespace-nowrap filter-active"
+              data-category="todos"
+            >
+              Todos los Productos
+            </button>
+            <button
+              class="filter-btn px-6 py-3 !rounded-button border border-gray-300 text-gray-700 hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+              data-category="sofas"
+            >
+              Sofás
+            </button>
+            <button
+              class="filter-btn px-6 py-3 !rounded-button border border-gray-300 text-gray-700 hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+              data-category="mesas"
+            >
+              Mesas
+            </button>
+            <button
+              class="filter-btn px-6 py-3 !rounded-button border border-gray-300 text-gray-700 hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+              data-category="sillas"
+            >
+              Sillas
+            </button>
+            <button
+              class="filter-btn px-6 py-3 !rounded-button border border-gray-300 text-gray-700 hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+              data-category="dormitorio"
+            >
+              Dormitorio
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+          id="products-grid"
+        >
+          <div
+            class="product-card bg-white rounded-xl shadow-lg overflow-hidden product-hover cursor-pointer"
+            data-category="sofas"
+          >
+            <div class="aspect-square overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=luxury%20modern%20leather%20sofa%20brown%20premium%20furniture%20elegant%20living%20room%20minimalist%20design%20high%20quality%20craftsmanship&width=400&height=400&seq=sofa-1&orientation=squarish"
+                alt="Sofá Premium Cuero"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">
+                Sofá Premium Cuero
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Sofá de 3 plazas en cuero genuino con estructura de madera
+                maciza
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-primary">€2,450</span>
+                <button
+                  class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-xl shadow-lg overflow-hidden product-hover cursor-pointer"
+            data-category="mesas"
+          >
+            <div class="aspect-square overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=elegant%20wooden%20dining%20table%20modern%20design%20oak%20wood%20premium%20furniture%20minimalist%20style%20high%20quality%20craftsmanship%20natural%20finish&width=400&height=400&seq=mesa-1&orientation=squarish"
+                alt="Mesa Comedor Roble"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">
+                Mesa Comedor Roble
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Mesa extensible para 6-8 personas en madera de roble natural
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-primary">€1,890</span>
+                <button
+                  class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-xl shadow-lg overflow-hidden product-hover cursor-pointer"
+            data-category="sillas"
+          >
+            <div class="aspect-square overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20dining%20chairs%20set%20elegant%20design%20comfortable%20upholstered%20seats%20premium%20furniture%20contemporary%20style%20high%20quality%20materials&width=400&height=400&seq=silla-1&orientation=squarish"
+                alt="Sillas Modernas Set"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">
+                Sillas Modernas Set
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Set de 4 sillas tapizadas con estructura metálica premium
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-primary">€680</span>
+                <button
+                  class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-xl shadow-lg overflow-hidden product-hover cursor-pointer"
+            data-category="dormitorio"
+          >
+            <div class="aspect-square overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=luxury%20bedroom%20furniture%20set%20modern%20bed%20frame%20nightstands%20premium%20wood%20finish%20elegant%20design%20high%20quality%20craftsmanship&width=400&height=400&seq=dormitorio-1&orientation=squarish"
+                alt="Conjunto Dormitorio"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">
+                Conjunto Dormitorio
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Cama matrimonial con mesitas de noche a juego
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-primary">€3,200</span>
+                <button
+                  class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-xl shadow-lg overflow-hidden product-hover cursor-pointer"
+            data-category="mesas"
+          >
+            <div class="aspect-square overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20coffee%20table%20glass%20top%20metal%20legs%20contemporary%20design%20living%20room%20furniture%20premium%20quality%20minimalist%20style%20elegant&width=400&height=400&seq=mesa-2&orientation=squarish"
+                alt="Mesa Centro Cristal"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">
+                Mesa Centro Cristal
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Mesa de centro con tapa de cristal templado y base metálica
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-primary">€750</span>
+                <button
+                  class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-xl shadow-lg overflow-hidden product-hover cursor-pointer"
+            data-category="sofas"
+          >
+            <div class="aspect-square overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=luxury%20sectional%20sofa%20modern%20design%20comfortable%20seating%20premium%20fabric%20upholstery%20living%20room%20furniture%20high%20quality%20craftsmanship&width=400&height=400&seq=sofa-2&orientation=squarish"
+                alt="Sofá Seccional"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">
+                Sofá Seccional
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Sofá modular de esquina con chaise longue integrado
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-primary">€3,800</span>
+                <button
+                  class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-xl shadow-lg overflow-hidden product-hover cursor-pointer"
+            data-category="dormitorio"
+          >
+            <div class="aspect-square overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20wardrobe%20closet%20premium%20wood%20finish%20sliding%20doors%20bedroom%20furniture%20elegant%20design%20high%20quality%20storage%20solution&width=400&height=400&seq=armario-1&orientation=squarish"
+                alt="Armario Moderno"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">
+                Armario Moderno
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Armario de 3 puertas correderas con interior organizado
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-primary">€2,100</span>
+                <button
+                  class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="product-card bg-white rounded-xl shadow-lg overflow-hidden product-hover cursor-pointer"
+            data-category="sillas"
+          >
+            <div class="aspect-square overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=ergonomic%20office%20chair%20premium%20leather%20executive%20furniture%20modern%20design%20comfortable%20seating%20high%20quality%20materials%20professional&width=400&height=400&seq=silla-2&orientation=squarish"
+                alt="Silla Ejecutiva"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold text-secondary mb-2">
+                Silla Ejecutiva
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Silla de oficina ergonómica con respaldo alto y brazos
+                ajustables
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-2xl font-bold text-primary">€450</span>
+                <button
+                  class="bg-secondary text-white px-4 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap"
+                >
+                  Ver Detalles
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <button
+            class="bg-primary text-secondary px-8 py-4 !rounded-button font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap"
+          >
+            Ver Más Productos
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-secondary mb-6">
+              Sobre Muebles Barbero
+            </h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              Con más de 25 años de experiencia en el sector del mueble, en
+              Muebles Barbero nos especializamos en crear piezas únicas que
+              combinan tradición artesanal con diseño contemporáneo.
+            </p>
+            <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+              Cada mueble es cuidadosamente seleccionado y fabricado con los
+              mejores materiales, garantizando durabilidad, funcionalidad y un
+              diseño excepcional que se adapta a cualquier espacio.
+            </p>
+            <div class="grid grid-cols-3 gap-8">
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i class="ri-award-line text-2xl text-secondary"></i>
+                </div>
+                <h3 class="font-semibold text-secondary mb-2">25+ Años</h3>
+                <p class="text-sm text-gray-600">de Experiencia</p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i class="ri-hammer-line text-2xl text-secondary"></i>
+                </div>
+                <h3 class="font-semibold text-secondary mb-2">Artesanal</h3>
+                <p class="text-sm text-gray-600">Fabricación</p>
+              </div>
+              <div class="text-center">
+                <div
+                  class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+                >
+                  <i class="ri-shield-check-line text-2xl text-secondary"></i>
+                </div>
+                <h3 class="font-semibold text-secondary mb-2">Garantía</h3>
+                <p class="text-sm text-gray-600">de Calidad</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img
+              src="https://readdy.ai/api/search-image?query=furniture%20workshop%20craftsman%20working%20on%20wooden%20furniture%20artisan%20creating%20premium%20quality%20pieces%20traditional%20woodworking%20tools%20and%20techniques&width=600&height=500&seq=workshop-1&orientation=landscape"
+              alt="Taller Muebles Barbero"
+              class="w-full rounded-xl shadow-lg object-cover object-top"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-secondary mb-4">
+            Contacta con Nosotros
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            ¿Tienes alguna pregunta o quieres hacer un pedido personalizado?
+            Estamos aquí para ayudarte a encontrar el mueble perfecto para tu
+            hogar.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <h3 class="text-2xl font-semibold text-secondary mb-8">
+              Envíanos un Mensaje
+            </h3>
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Nombre Completo</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                    placeholder="Tu nombre completo"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                    placeholder="tu@email.com"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Teléfono</label
+                >
+                <input
+                  type="tel"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm"
+                  placeholder="+34 600 000 000"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Tipo de Consulta</label
+                >
+                <div class="relative">
+                  <button
+                    type="button"
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm text-left bg-white flex items-center justify-between"
+                    id="consultation-select"
+                  >
+                    <span>Selecciona el tipo de consulta</span>
+                    <i class="ri-arrow-down-s-line text-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Mensaje</label
+                >
+                <textarea
+                  rows="5"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-sm resize-none"
+                  placeholder="Cuéntanos sobre tu proyecto o consulta..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-secondary py-4 !rounded-button font-semibold hover:bg-opacity-90 transition-colors whitespace-nowrap"
+              >
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold text-secondary mb-8">
+              Información de Contacto
+            </h3>
+            <div class="space-y-8">
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-map-pin-line text-xl text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-secondary mb-2">Dirección</h4>
+                  <p class="text-gray-600">
+                    Calle Artesanos, 45<br />28001 Madrid, España
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-phone-line text-xl text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-secondary mb-2">Teléfono</h4>
+                  <p class="text-gray-600">+34 915 123 456</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-whatsapp-line text-xl text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-secondary mb-2">WhatsApp</h4>
+                  <p class="text-gray-600">+34 650 987 654</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-mail-line text-xl text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-secondary mb-2">Email</h4>
+                  <p class="text-gray-600">info@mueblesbarbero.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-4">
+                <div
+                  class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0"
+                >
+                  <i class="ri-time-line text-xl text-secondary"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-secondary mb-2">Horarios</h4>
+                  <p class="text-gray-600">
+                    Lunes a Viernes: 9:00 - 18:00<br />Sábados: 10:00 - 14:00
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-12 p-6 bg-white rounded-xl shadow-lg">
+              <h4 class="font-semibold text-secondary mb-4">
+                ¿Necesitas una Cotización?
+              </h4>
+              <p class="text-gray-600 mb-6">
+                Contáctanos directamente por WhatsApp para recibir una
+                cotización personalizada en menos de 24 horas.
+              </p>
+              <button
+                class="w-full bg-green-500 text-white py-3 !rounded-button font-semibold hover:bg-green-600 transition-colors flex items-center justify-center space-x-2 whitespace-nowrap"
+              >
+                <i class="ri-whatsapp-line text-xl"></i>
+                <span>Chatear por WhatsApp</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-secondary text-white py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center space-x-4 mb-6">
+              <div
+                class="w-12 h-12 bg-primary rounded-full flex items-center justify-center"
+              >
+                <span class="text-secondary font-bold text-xl">MA</span>
+              </div>
+              <span class="text-xl font-bold">MUEBLES BARBERO</span>
+            </div>
+            <p class="text-gray-300 mb-6">
+              Creando muebles de calidad premium con más de 25 años de
+              experiencia en el sector.
+            </p>
+            <div class="flex space-x-4">
+              <div
+                class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
+              >
+                <i class="ri-facebook-line text-lg"></i>
+              </div>
+              <div
+                class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
+              >
+                <i class="ri-instagram-line text-lg"></i>
+              </div>
+              <div
+                class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-primary transition-colors cursor-pointer"
+              >
+                <i class="ri-linkedin-line text-lg"></i>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Productos</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Sofás y Sillones</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Mesas y Sillas</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Dormitorio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Oficina</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Decoración</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Servicios</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Muebles a Medida</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Entrega e Instalación</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Asesoramiento</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Garantía</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-primary transition-colors"
+                  >Mantenimiento</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Contacto</h3>
+            <ul class="space-y-3">
+              <li class="text-gray-300">
+                Calle Artesanos, 45<br />28001 Madrid
+              </li>
+              <li class="text-gray-300">+34 915 123 456</li>
+              <li class="text-gray-300">info@mueblesbarbero.com</li>
+            </ul>
+            <div class="mt-6">
+              <h4 class="font-semibold mb-3">Métodos de Pago</h4>
+              <div class="flex space-x-3">
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-visa-fill text-2xl text-gray-300"></i>
+                </div>
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-mastercard-fill text-2xl text-gray-300"></i>
+                </div>
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-paypal-fill text-2xl text-gray-300"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p class="text-gray-400">
+            © 2025 Muebles Barbero. Todos los derechos reservados. |
+            <a href="#" class="hover:text-primary transition-colors"
+              >Política de Privacidad</a
+            >
+            |
+            <a href="#" class="hover:text-primary transition-colors"
+              >Términos y Condiciones</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script id="filter-functionality">
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const productCards = document.querySelectorAll(".product-card");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const category = this.getAttribute("data-category");
+
+            filterButtons.forEach((btn) => {
+              btn.classList.remove("filter-active");
+              btn.classList.add("border-gray-300", "text-gray-700");
+            });
+
+            this.classList.add("filter-active");
+            this.classList.remove("border-gray-300", "text-gray-700");
+
+            productCards.forEach((card) => {
+              if (
+                category === "todos" ||
+                card.getAttribute("data-category") === category
+              ) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+
+    <script id="smooth-scroll">
+      document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+              targetSection.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+
+    <script id="hero-cta-scroll">
+      document.addEventListener("DOMContentLoaded", function () {
+        const ctaButtons = document.querySelectorAll(".hero-bg button");
+
+        ctaButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            if (this.textContent.includes("Catálogo")) {
+              document.querySelector("#catalogo").scrollIntoView({
+                behavior: "smooth",
+              });
+            } else if (this.textContent.includes("Contactar")) {
+              document.querySelector("#contacto").scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
